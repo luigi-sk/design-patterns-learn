@@ -1,5 +1,0 @@
-package designPatterns.immutable;
-
-public interface Reverseable {
-	public String reverse();
-}
