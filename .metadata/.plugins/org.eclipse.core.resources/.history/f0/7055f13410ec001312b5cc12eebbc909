@@ -1,0 +1,27 @@
+package designPatterns.immutable;
+
+public final class ImmutableString implements Reverseable {
+	private String firstName;
+	private String lastName;	
+
+	public ImmutableString(String firstName, String lastName) {
+		super();
+		this.firstName = new String(firstName);
+		this.lastName = new String(lastName);
+	}
+
+	public final int hashCode() {		
+		return super.hashCode();
+	}
+
+	public final boolean equals(Object obj) {		
+		return super.equals(obj);
+	}
+
+	public String reverse() {
+		String reversedFirstName = new StringBuilder(firstName).reverse().toString();
+		String reversedLastName = new StringBuilder(lastName).reverse().toString();
+		return null;
+	}
+
+}
