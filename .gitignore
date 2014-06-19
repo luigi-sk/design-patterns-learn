@@ -1,6 +1,7 @@
-.plugins/*
+**/.plugins/*
 .metadata/*
-*.class
+**/.metadata/*
+**.class
 .mtj.tmp/
 
 # Package Files #
