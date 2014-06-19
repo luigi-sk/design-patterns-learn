@@ -1,3 +1,5 @@
+import java.awt.Canvas;
+import java.awt.Graphics;
 import java.awt.Point;
 
 
@@ -11,6 +13,12 @@ public class AnimatedMoveServant implements MoveableServant {
 		}catch(Exception e){
 			System.out.println(e.getMessage());
 		}
+	}
+	
+	public void paint(Moveable target, Graphics canvas) {
+		Point position = target.getPosition();
+		canvas.fillRect(position.x, position.y, 
+				position.x + 50, position.y + 50);
 	}
 
 }

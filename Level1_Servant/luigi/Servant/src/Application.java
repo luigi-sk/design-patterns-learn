@@ -23,7 +23,8 @@ public class Application {
         frame.setSize(size);
         
         Canvas canvas = new Canvas();
-        canvas.setPreferredSize(size);        
+        canvas.setPreferredSize(size);
+        canvas.setSize(size);
         frame.add(canvas);
         
         MoveableServant simpleServant = new SimpleMoveServant();
@@ -32,6 +33,11 @@ public class Application {
         Moveable box = new Box();
         box.setPosition(new Point(10, 10));
         simpleServant.move(new Point(100, 100), box);
+        simpleServant.paint(box, canvas.getGraphics());
+        
+        animatedServant.move(new Point(80, 80), box);
+        animatedServant.paint(box, frame.getGraphics());
+        
 	}
 
 }
